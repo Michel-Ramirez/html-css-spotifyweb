@@ -25,9 +25,19 @@ header {
     align-items: center;
 }
 
+header, .navbar {
+    position: sticky;
+    top:0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
 main{
     height: calc(100vh - 80px);
     background-color: #141922;
+    position: relative;
+    overflow-x: scroll;
 }
 
 footer {
@@ -40,7 +50,21 @@ a {
     color: #A3A3A3;
 }
 
+h2 {
+    height: 50px;
+    border: 1px dashed yellow;
+    background-color: aqua;
+}
+
+
+
 /**************** UTILITY ***************/
+
+.container {
+    max-width: 500px;
+    padding: 0 2rem;
+    margin-left: 50px;
+}
 
 .d-flex {
     display: flex;
@@ -52,17 +76,41 @@ a {
     width: 50px;
     height: calc(100vh - 80px);
     background-color: black;
-    /* position: absolute; */
+    position: fixed;
+    top:0;
+    left: 0;
 }
-
-/* HEADER */
 
 .btn-upgrade{
     display: block;
 }
 
+
+/* MAIN CONTENT */
+
+
 .navbar ul{
     list-style-type: none;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
+.navbar ul li {
+    border: 2px dashed red;
+    width: calc(100% / 4);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 800;
+}
+
+
+.recent-played .row {
+    flex-wrap: wrap;
+}
+
+.recent-played .cards {
+    width: calc(100% / 2);
+    height: 200px;
+    border: 1px dashed green;
+}

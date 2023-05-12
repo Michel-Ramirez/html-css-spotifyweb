@@ -13,4 +13,26 @@ Extra extra large	xxl	≥1400px */
         width: 250px;
     }
     
+    .container {
+        margin-left: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .container {
+        max-width: 850px;
+    }
+    
+    .recent-played .cards {
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .recent-played .cards {
+        width: calc(100% / 6);
+    }
+
 }
