@@ -6,9 +6,63 @@
     box-sizing: border-box;
 }
 
+/*********** PALET **************/
+
+
+
+
 /*********** GENERICS ********/
 
 body {
     font-family: 'Montserrat', sans-serif;
+    color: #A3A3A3;
+}
+
+header {
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.206);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main{
+    height: calc(100vh - 80px);
+    background-color: #141922;
+}
+
+footer {
+    height: 80px;
+    background-color: #282828;
+}
+
+a {
+    text-decoration: none;
+    color: #A3A3A3;
+}
+
+/**************** UTILITY ***************/
+
+.d-flex {
+    display: flex;
+}
+
+/********* NAVBAR ******/
+
+.sidebar{
+    width: 50px;
+    height: calc(100vh - 80px);
+    background-color: black;
+    /* position: absolute; */
+}
+
+/* HEADER */
+
+.btn-upgrade{
+    display: block;
+}
+
+.navbar ul{
+    list-style-type: none;
+    flex-wrap: wrap;
 }
 
