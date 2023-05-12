@@ -16,6 +16,36 @@ Extra extra large	xxl	≥1400px */
     .container {
         margin-left: 250px;
     }
+
+    .sidebar {
+        text-align: start;
+        padding: 0 20px ;
+    }
+    
+    .sidebar ul li {
+        list-style-type: none;
+        
+    }
+
+    .logo-sm img {
+        display: none;
+    }
+
+    .logo-lg img {
+        display: block;
+        width: 150px;
+    }
+
+    .sidebar ul span {
+        display: inline;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .my-playlist {
+        display: block;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -27,12 +57,24 @@ Extra extra large	xxl	≥1400px */
     .recent-played .cards {
         width: calc(100% / 4);
     }
+
+    .navbar ul li {
+        width: calc(100% / 5);
+    }
 }
 
 @media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 100%;
+    }
     
     .recent-played .cards {
         width: calc(100% / 6);
+  
     }
 
+    .navbar ul li {
+        width: calc(100% / 6);
+    }
 }
