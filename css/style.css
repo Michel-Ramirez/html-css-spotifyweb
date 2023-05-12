@@ -84,7 +84,7 @@ h2 {
 }
 
 
-/* LAYOUT*/
+/********** LAYOUT *********/
 
 
 .navbar ul{
@@ -138,5 +138,28 @@ h2 {
 }
 
 .my-playlist {
-    display: none;
+    visibility: collapse;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.my-playlist .add-playlist {
+    font-size: 1rem;
+}
+
+.my-playlist li {
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+#dl-app {
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+#dl-app:before {
+    content: '\f358';
+    font: var(--fa-font-solid);
+    padding-right: 10px;
 }

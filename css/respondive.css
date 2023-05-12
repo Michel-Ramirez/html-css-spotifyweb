@@ -43,8 +43,9 @@ Extra extra large	xxl	≥1400px */
     }
 
     .my-playlist {
-        display: block;
+        visibility: visible;
     }
+
 
 }
 
