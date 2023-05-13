@@ -33,7 +33,7 @@ main{
     height: calc(100vh - 80px);
     background-color: rgb(20, 25, 34);
     position: relative;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 footer {
@@ -67,25 +67,20 @@ h2 {
     display: flex;
 }
 
-/********* NAVBAR ******/
-
-.sidebar{
-    width: 50px;
-    height: calc(100vh - 80px);
-    background-color: black;
-    position: fixed;
-    top:0;
-    left: 0;
-    text-align: center;
+.separator {
+    border: 1px solid #A3A3A3;
+    display: none;
 }
+
+/********* NAVBAR ******/
 
 .btn-upgrade{
     display: block;
+    border: 1px solid #A3A3A3;
+    border-radius: 25px;
+    padding: 10px 50px;
+    margin-right: 10px;
 }
-
-
-/********** LAYOUT *********/
-
 
 .navbar ul{
     flex-wrap: wrap;
@@ -101,24 +96,21 @@ h2 {
     font-weight: 800;
 }
 
-.recent-played .row {
-    flex-wrap: wrap;
+
+
+/* SIDEBAR */
+
+.sidebar{
+    width: 50px;
+    height: calc(100vh - 80px);
+    background-color: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-.recent-played .cards {
-    width: calc(100% / 2);
-    height: 200px;
-    border: 1px dashed green;
-}
-
-.img-circle {
-    height: 100%;
-    border: 1px dashed blue;
-    border-radius: 50%;
-}
-
-
-/* CONTENT SIDEBAR */
 
 .sidebar img {
     width: 30px;
@@ -141,7 +133,6 @@ h2 {
     visibility: collapse;
     height: calc(100vh - 80px);
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .my-playlist .add-playlist {
@@ -153,13 +144,53 @@ h2 {
     font-weight: 600;
 }
 
-#dl-app {
-    font-size: 0.7rem;
-    font-weight: 800;
+.my-playlist h4 {
+    padding: 10px 0;
+    margin-top: 10px;
+    color: white;
 }
 
-#dl-app:before {
-    content: '\f358';
-    font: var(--fa-font-solid);
-    padding-right: 10px;
+#dl-app {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    display: none;
 }
+
+.fa-user {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #A3A3A3;
+    color: white;
+    text-align: center;
+    line-height: 110%;
+    margin: 20px 0;
+}
+
+#user-name {
+    font-weight: 600;
+    color: white;
+    padding: 0 10px;
+    display: none;
+}
+
+/********** MAIN CONTENT CARDS/ALBUMS *******/
+
+.recent-played .row {
+    flex-wrap: wrap;
+}
+
+.recent-played .cards {
+    width: calc(100% / 2);
+    height: 200px;
+    border: 1px dashed green;
+}
+
+.img-circle {
+    height: 100%;
+    border: 1px dashed blue;
+    border-radius: 50%;
+}
+
