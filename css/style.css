@@ -23,7 +23,7 @@ header {
     background-color: rgb(20, 25, 34);
     justify-content: flex-end;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top:0;
     right: 0;
     left: 0;
@@ -33,7 +33,7 @@ main{
     height: calc(100vh - 80px);
     background-color: rgb(20, 25, 34);
     position: relative;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 footer {
@@ -61,6 +61,7 @@ h2 {
     max-width: 500px;
     padding: 0 2rem;
     margin-left: 50px;
+    margin-top: 80px;
 }
 
 .d-flex {
@@ -95,8 +96,6 @@ h2 {
     padding: 10px 0;
     font-weight: 800;
 }
-
-
 
 /* SIDEBAR */
 
@@ -192,5 +191,68 @@ h2 {
     height: 100%;
     border: 1px dashed blue;
     border-radius: 50%;
+}
+
+/******************* FOOTER *******************/
+
+footer div {
+    height: 100%;
+    border: 1px dashed red;
+    align-items: center;    
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+.playing {
+ width: 25%;
+}
+
+.media-commands {
+    width: 50%;
+}
+
+.vol-others {
+    width: 25%;
+}
+
+.playing img {
+    width: 50px;
+    height: 50px;
+}
+
+.title-track, .title-album {
+    font-size: 0.8rem;
+    padding: 0 10px;
+}
+
+.title-album {
+    font-weight: 800;
+    color: white;
+}
+
+.favorites i {
+    padding: 0 5px;
+}
+
+.media-commands ul {
+    justify-content: center;
+    color: white;
+}
+
+.media-commands ul li {
+    padding: 10px;
+}
+
+.vol-others ul {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.vol-others li {
+    padding: 0 5px;
+    font-size: 0.8rem;
 }
 

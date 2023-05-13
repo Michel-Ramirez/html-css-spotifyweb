@@ -72,6 +72,11 @@ Extra extra large	xxl	≥1400px */
     .navbar ul li {
         width: calc(100% / 5);
     }
+
+    .favorites {
+        display: flex;
+        margin: 0 30px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -88,4 +93,5 @@ Extra extra large	xxl	≥1400px */
     .navbar ul li {
         width: calc(100% / 6);
     }
+
 }
