@@ -49,9 +49,12 @@ a {
 }
 
 h2 {
-    height: 50px;
-    border: 1px dashed yellow;
-    background-color: aqua;
+    color: white;
+    margin: 30px 0;
+}
+
+h3 {
+    color: white;
 }
 
 
@@ -183,15 +186,33 @@ h2 {
 
 .recent-played .cards {
     width: calc(100% / 2);
-    height: 200px;
-    border: 1px dashed green;
+    text-align: center;
 }
 
-.img-circle {
+.img-circle img {
     height: 100%;
-    border: 1px dashed blue;
     border-radius: 50%;
 }
+
+.suggestion {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+}
+
+.cards img {
+    padding: 10px 0 ;
+    padding-right: 20px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 
 /******************* FOOTER *******************/
 
@@ -255,4 +276,3 @@ footer ul {
     padding: 0 5px;
     font-size: 0.8rem;
 }
-
