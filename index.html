@@ -12,27 +12,30 @@
 </head>
 <body>
     <main class="d-flex">
+        <!-- ---- SIDEBAR ----  -->
         <nav class="sidebar d-flex">
-            <figure class="logo-sm">
-                <img src="img/logo-small.svg" alt="logo-small">
-            </figure>
-            <figure class="logo-lg">
-                <img src="img/logo.svg" alt="Logo-LG">
-            </figure>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-house fa-xl"></i>
-                    <span>Home</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                    <span>Cerca</span>
-                </li>
-                <li>
-                    <i class="fa-solid fa-lines-leaning fa-flip-horizontal fa-xl"></i>
-                    <span>La tua libreria</span>
-                </li>
-            </ul>
+            <div>
+                <figure class="logo-sm">
+                    <img src="img/logo-small.svg" alt="logo-small">
+                </figure>
+                <figure class="logo-lg">
+                    <img src="img/logo.svg" alt="Logo-LG">
+                </figure>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-house fa-xl"></i>
+                        <span>Home</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                        <span>Cerca</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-lines-leaning fa-flip-horizontal fa-xl"></i>
+                        <span>La tua libreria</span>
+                    </li>
+                </ul>
+            </div>
             <h4>PLAYLIST</h4>
             <div class="add-playlist">
                 <i class="fa-solid fa-square-plus fa-2xl"></i>
@@ -52,15 +55,18 @@
                 </div>
             </div>
             <div>
-                <i class="fa-regular fa-circle-down"></i>
-                <a href="#" id="dl-app">Installa app</a>
-            </div>
-            <div class="separator"></div>
-            <div class="user-profile">
-                <i class="fa-regular fa-user fa-xl"></i>
-                <span id="user-name">John Doe</span>
+                <div>
+                    <i class="fa-regular fa-circle-down"></i>
+                    <a href="#" id="dl-app">Installa app</a>
+                </div>
+                <div class="separator"></div>
+                <div class="user-profile">
+                    <i class="fa-regular fa-user fa-xl"></i>
+                    <span id="user-name">John Doe</span>
+                </div>
             </div>
         </nav>
+        <!-- ----- CONTENT IN MAIN ALBUM AND NAVBAR ----- -->
         <div class="container-main">
             <header class="d-flex">
                 <a href="#" class="btn-upgrade">EFFETTUA L'UPGRADE</a>
@@ -79,34 +85,51 @@
                 <div class="recent-played mb-50">
                     <h2>Recently</h2>
                     <div class="row d-flex">
-                        <div class="cards">
-                            <img src="img/metal_lifting.jpg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">
+                                <img src="img/metal_lifting.jpg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>Heavy Metal</h3>
                             <span class="subtitle">Subtitle</span>
                         </div>
-                        <div class="cards">
-                            <img src="img/stranger.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">
+                                <img src="img/stranger.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
                             <span class="subtitle">Kyle Dixon & Michael Stein</span>
                         </div>
-                        <div class="cards">
-                            <img src="img/aquietplace.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">                
+                                <img src="img/aquietplace.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>A quiet place</h3>
                             <span class="subtitle">Subtitle</span>
                       </div>
-                        <div class="cards">
-                            <img src="img/split.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album"> 
+                                <img src="img/split.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>Split</h3>
                             <span class="subtitle">Subtitle</span>
                         </div>
-                        <div class="cards">
-                            <img src="img/cure.jpeg" alt="img-album">
-    
+                        <div class="card">
+                            <div class="play-album"> 
+                                <img src="img/cure.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>  
                             <h3>A cure for wellness</h3>
                             <span class="subtitle">Subtitle</span>
                         </div>
-                        <div class="cards">
-                            <img src="img/sinister.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album"> 
+                                <img src="img/sinister.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>Sinister</h3>
                             <span class="subtitle">Subtitle</span>
                         </div>
@@ -114,29 +137,41 @@
                     <h2>Creato per John Dow</h2>
                     <span class="suggestion">Più ascolti, più accurati saranno i suggerimenti.</span>
                     <div class="row d-flex">
-                        <div class="cards">
-                            <img src="img/radar.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">
+                                <img src="img/radar.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>Release Radar</h3>
                         </div>
-                        <div class="cards">
-                            <img src="img/mixdaily.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">
+                                <img src="img/mixdaily.jpeg" alt="img-album">
+                                <i class="fa-regular fa-circle-play fa-5x"></i>
+                            </div>
                             <h3>Daily Mix 1</h3>
                         </div>
                     </div>
                     <h2>Artisti popolari</h2>
                     <span class="suggestion">Più ascolti, più accurati saranno i suggerimenti.</span>
                     <div class="row d-flex">
-                        <div class="cards">
-                            <figure class="img-circle">
-                                <img src="img/youg.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">
+                                <figure class="img-circle">
+                                    <img src="img/youg.jpeg" alt="img-album">
+                                    <i class="fa-regular fa-circle-play fa-5x"></i>
+                                </figure>
                                 <h3>Lana del Rey</h3>
-                            </figure>
+                            </div>
                         </div>
-                        <div class="cards">
-                            <figure class="img-circle">
-                                <img src="img/einaudi.jpeg" alt="img-album">
+                        <div class="card">
+                            <div class="play-album">
+                                <figure class="img-circle">
+                                    <img src="img/einaudi.jpeg" alt="img-album">
+                                    <i class="fa-regular fa-circle-play fa-5x"></i>
+                                </figure>
                                 <h3>Ludovico Einaudi</h3>
-                            </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -144,6 +179,7 @@
         </div>
     </main>
     <footer class="d-flex">
+        <!-- ---- SECTION LEFT INFO TRACK IN PLAYING ---- -->
         <div class="playing d-flex">
             <figure><img src="img/sinister.jpeg" alt="img-track"></figure>
             <ul>
@@ -155,6 +191,7 @@
                 <li><i class="fa-regular fa-folder"></i></li>
             </ul>
         </div>
+        <!-- ---- COMMANDS ---- -->
         <div class="media-commands">
             <div class="row">
                 <ul class="d-flex">
