@@ -8,7 +8,10 @@
 
 /*********** PALET **************/
 
-
+:root {
+    --main-color: rgb(20, 25, 34);
+    --text-color: white;
+}
 
 
 /*********** GENERICS ********/
@@ -20,27 +23,32 @@ body {
 
 header {
     height: 80px;
-    background-color: rgb(20, 25, 34);
+    background-color: var(--main-color);
     justify-content: flex-end;
     align-items: center;
-    position: fixed;
+
+    position: sticky;
     top:0;
-    right: 0;
     left: 0;
+    z-index: 1;
 }
 
 main{
     height: calc(100vh - 80px);
-    background-color: rgb(20, 25, 34);
-    position: relative;
-    overflow-y: auto;
+    background-color: var(--main-color);
+}
+
+.sidebar{
+    width: 50px;
+    background-color: black;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 footer {
     height: 80px;
     background-color: #282828;
-    position: sticky;
-    z-index: 1;
 }
 
 a {
@@ -49,21 +57,32 @@ a {
 }
 
 h2 {
-    color: white;
+    color: var(--text-color);
     margin-top: 50px;
 }
 
 h3 {
-    color: white;
+    color: var(--text-color);
+}
+
+h4 {
+    padding: 10px 0;
+    margin-top: 10px;
+    color: var(--text-color);
 }
 
 /**************** UTILITY ***************/
 
-.container {
+.container-main {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    overflow: auto;
+}
+
+.container-content{
     max-width: 500px;
     padding: 0 2rem;
-    margin-left: 50px;
-    margin-top: 80px;
 }
 
 .d-flex {
@@ -82,9 +101,9 @@ h3 {
 
 /******* EFFECT IN HOVER *******/
 
-#dl-app:hover, .fa-circle-down, .sidebar ul li:hover, .fa-user:hover, #user-name:hover, .navbar ul a:hover{
+#dl-app:hover, .fa-circle-down, .sidebar ul li:hover, .fa-user:hover, #user-name:hover, .navbar ul a:hover, .add-playlist:hover{
     cursor: pointer;
-    color: white;
+    color: var(--text-color);
 }
 
 /* :active   in navbar in main */
@@ -109,10 +128,10 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
+    gap:20px
 }
 
 .navbar ul li {
-    width: calc(100% / 4);
     font-size: 0.7rem;
     text-align: center;
     padding: 10px 0;
@@ -121,24 +140,13 @@ h3 {
 
 /* SIDEBAR */
 
-.sidebar{
-    width: 50px;
-    height: calc(100vh - 80px);
-    background-color: black;
-    position: fixed;
-    top:0;
-    left: 0;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .sidebar img {
     width: 30px;
     margin: 20px 0;
 }
 
-.logo-lg img {
+.logo-lg img, .sidebar ul span, .sidebar h4, .add-playlist  {
     display: none;
 }
 
@@ -146,12 +154,9 @@ h3 {
     padding: 10px 0;
 }
 
-.sidebar ul span {
-    display: none;
-}
 
-.sidebar ul li:first-child {
-    color: white;
+.add-playlist{
+    margin: 20px 0;
 }
 
 .my-playlist {
@@ -168,12 +173,6 @@ h3 {
 .my-playlist li {
     font-size: 0.7rem;
     font-weight: 600;
-}
-
-.my-playlist h4 {
-    padding: 10px 0;
-    margin-top: 10px;
-    color: white;
 }
 
 #dl-app {
@@ -198,7 +197,7 @@ h3 {
 
 #user-name {
     font-weight: 600;
-    color: white;
+    color: var(--text-color);
     padding: 0 10px;
     display: none;
 }
@@ -207,10 +206,14 @@ h3 {
 
 .recent-played .row {
     flex-wrap: wrap;
+    gap: 10px;
+
+
+
 }
 
 .recent-played .cards {
-    width: calc(100% / 2);
+    width: calc(100% / 2 - 20px);
     text-align: center;
 }
 
@@ -231,11 +234,8 @@ h3 {
 
 .cards img {
     padding: 20px 0 ;
-    padding-right: 20px;
     display: block;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
+    max-width: 100%;
 }
 
 /* .cars.fa-circle-play {
@@ -281,7 +281,7 @@ footer ul {
 
 .title-album {
     font-weight: 800;
-    color: white;
+    color: var(--text-color);
 }
 
 .favorites i {
@@ -290,7 +290,7 @@ footer ul {
 
 .media-commands ul {
     justify-content: center;
-    color: white;
+    color: var(--text-color);
 }
 
 .media-commands ul li {
