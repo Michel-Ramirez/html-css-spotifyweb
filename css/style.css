@@ -106,10 +106,15 @@ h4 {
     color: var(--text-color);
 }
 
-/* :active   in navbar in main */
+/* :focus   in navbar in main */
 
+.navbar a:focus {
+    border-bottom: 3px solid green;
 
-/* BTN in header effect zoom  */
+}
+
+/* BTN in header animation */
+
 .btn-upgrade:hover {
     transform: scale(1.1);
 }
@@ -207,9 +212,6 @@ h4 {
 .recent-played .row {
     flex-wrap: wrap;
     gap: 10px;
-
-
-
 }
 
 .recent-played .cards {
@@ -238,11 +240,6 @@ h4 {
     max-width: 100%;
 }
 
-/* .cars.fa-circle-play {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-} */
 
 
 /******************* FOOTER *******************/
